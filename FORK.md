@@ -46,6 +46,10 @@ preserved and merge conflicts require review. A green run with no PR means there
 were no new upstream commits. GitHub can delay scheduled runs or disable schedules
 after 60 days of inactivity in a public repository; check Actions if updates stop.
 
+PRs created with `GITHUB_TOKEN` do not automatically trigger other workflows.
+Do not treat a green update-check run as plugin validation. Review upstream CI
+and run the validation described in the upstream README before merging changes.
+
 After merging an update, refresh each installed environment:
 
 ```sh
